@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping-Cart</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;1,200;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@100;200;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+   
+    <div class="main">
+        
+        <div class="page-1">
+            <aside>
+                <div class="colors">
+                    <p>Colors</p>
+                    <label><input type="checkbox"   value="red" id="red" /> Red</label><br>
+                    <label><input type="checkbox"   value="blue" id="blue" /> Blue</label><br>
+                    <label><input type="checkbox"   value="green" id="green" /> Green</label><br>
+                    <label><input type="checkbox"   value="black" id="black" /> Black</label><br>
+                    <label><input type="checkbox"   value="white" id="white" /> White</label><br>
+                </div>
+                <hr>
+                <div class="sizes">
+                    <p>Sizes</p>
+                    <label><input type="checkbox"  value="s" id="s" /> S</label><br>
+                    <label><input type="checkbox"  value="m" id="m" /> M</label><br>
+                    <label><input type="checkbox"  value="l" id="l" /> L</label><br>
+                    <label><input type="checkbox"  value="xl" id="xl" /> XL</label><br>
+                </div>
+                <hr>
+                <div class="rating">
+                    <p>Rating</p>
+                    <div>
+                    <span>0</span>
+                    <input type="range" id="rating" min="0" max="5" value="0">
+                    <span>5</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="prices">
+                    <p>Price Range</p>
+                    <label><input type="checkbox" id="range1" data-range="25" /> $0 to $25</label><br>
+                    <label><input type="checkbox" id="range2" data-range="50" /> $25 to $50</label><br>
+                    <label><input type="checkbox" id="range3" data-range="100" /> $50 to $100</label><br>
+                    <label><input type="checkbox" id="range4" data-range="500" /> $100 onwards</label><br>
+                </div>
+            </aside>
+            <div>
+            <nav>
+            <h1>ALLINONE</h1>
+            <div class="nav-links">
+                <ul>
+                    <li>MEN</li>
+                    <li>WOMEN</li>
+                    <li>KIDS</li>
+                    <li>COLLECTION</li>
+                    <li>TRENDS</li>
+                </ul>
+            </div>
+            <button id="nav-btn">Login</button>
+            </nav>
+            <div class="content">
+                <!-- <div class="patterns">
+                    <img src="./images/Group 14.png" alt="">
+                    <img src="./images/Group 14.png" alt="">
+                    <img src="./images/Group 14.png" alt="">
+                    <img src="./images/Group 14.png" alt="">
+                    <img src="./images/Group 14.png" alt="">
+                    <img src="./images/Group 14.png" alt="">
+
+                </div> -->
+                <div class="content-1">
+                    <h1>the best store to shop online All in one</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima laborum id dolores! Unde, explicabo quasi. Labore, ipsum. Molestiae quod iusto consequatur labore unde in dolorem voluptates veniam, perferendis ipsum officiis!</p>
+                    <button id="content-btn">shop now</button>
+                </div>
+                <div class="img-content">
+                <img src="./images/Frame 4.png" alt="img">
+                </div>
+            </div>
+            <img id="wave-img" src= "./images/path (1).png" alt="">
+            </div>
+        </div>
+        <div class="page-2">
+            <h1 class="page-2-text">New Collection</h1>
+            <p class="page-2-text p">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <div class="card-img">
+                <img src="./images/1.png" alt="">
+                <img src="./images/2.png" alt="">
+                <img src="./images/3.png" alt="">
+            </div>
+            <div class="content-2">
+                <img src="./images/Rectangle 7.png" alt="">
+                <div class="text-content">
+                    <p>Best Sell</p>
+                    <p>Since 2021</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro animi molestias veniam obcaecati. Reprehenderit nostrum reiciendis quae fugiat rerum eius iste minima culpa ad quis fugit, laborum, eveniet eos modi!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>

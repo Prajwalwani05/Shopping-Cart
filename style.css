@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+body{
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+/* Aside */
+aside{
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-weight: 200;
+    color:white;
+    width: 13%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5.5vh;
+    padding:20px;
+    border-right: 1px solid white;
+    background-color:rgb(60, 18, 27);
+}
+aside hr{
+    border: none;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.658);
+}
+aside label{
+    font-weight: 200;
+    font-size: 12px;
+    font-family: 'Roboto Serif', serif;
+}
+aside .colors{
+  margin-top: 20px;
+}
+aside p{
+    font-family: 'Roboto Serif', serif;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 300;
+}
+aside .rating div{
+    display: flex;
+    gap: 5px;
+}
+input[type=range]{
+    height: 2px;
+    margin-top: 10px;
+}
+aside .prices label{
+    font-size: 12px;
+    font-family: 'Roboto Serif', serif;
+    font-weight: 100;
+    word-spacing: 1px;
+    letter-spacing: 2px;
+}
+.prices input{
+    cursor: pointer;
+    width: 12px;
+}
+
+ /* Page-1 */
+.page-1{
+    margin-left: 120px;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #F2DEDF;
+}
+.page-1 nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vh 10%;
+}
+.page-1 nav ul{
+    display: flex;
+    gap: 20%;
+}
+li{
+    list-style: none;
+    font-size: 13px;
+    cursor: pointer;
+}
+.page-1 nav h1{
+    font-size: 20px;
+    font-weight: 500;
+}
+.page-1 nav button{
+    border-width: 1.8px;
+    width: 80px;
+    padding: 5px;
+    margin-right: 5vw;
+    font-size: 15px;
+    cursor: pointer;
+}
+.content{
+    display: flex;
+    margin-top: 3vh;
+    /* outline: 1px solid red; */
+}
+.content .content-1{
+    margin-top: 4vh;
+    margin-left:10vw;
+    /* outline: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    row-gap: 10vh;
+}
+.content .content-1 h1{
+    text-transform: capitalize;
+    font-family: 'Roboto Serif', serif;
+    font-weight: 500;
+    font-size: 35px;
+    width: 70%;
+}
+.content .content-1 p{
+    width: 60%;
+    font-size: 14px;
+    margin-left: 5px;
+}
+.content .content-1 button{
+    margin-left: 5px;
+    width: 30%;
+    text-transform: capitalize;
+    padding: 8px;
+    background-color: black;
+    color:white;
+    border: none;
+}
+.content img{
+    margin-top: 2vh;
+    margin-right: 14vw;
+    width: 450px;
+    /* outline: 1px solid red; */
+}
+#wave-img{
+   margin-left:8vw;
+   height: 70px;
+}
+
+/* Page-2 */
+.page-2{
+    margin-left: 120px;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+}
+.page-2 .page-2-text, .page-2 .page-2-text{
+    text-align: center;
+    font-family: 'Roboto Serif', serif;
+    font-size: 25px;
+}
+.page-2 h1{
+    padding-top: 20px;
+}
+.page-2 .p{
+    padding-top: 10px;
+    font-size: 13px;
+}
+.page-2 .card-img{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.page-2 img{
+    padding-top: 20px;
+    width: 12vw;   
+}
+.page-2 .content-2{
+    display: flex;
+    margin-left: 20px;
+}
