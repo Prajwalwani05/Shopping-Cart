@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    font-weight: 400;
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar{
+    background-color:rgb(244, 19, 68); 
+    width: 12px;
+}
+body::-webkit-scrollbar-track{
+      background-color: rgb(197, 103, 139);
+}
+body::-webkit-scrollbar-thumb{
+    background-color:#850b0b;
+}
+body::-webkit-scrollbar-button{
+    background-color: #f57d7d;
+}
+aside{
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-weight: 100;
+    color:white;
+    width: 13%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4.5vh;
+    padding:20px;
+    border-right: 1px solid white;
+    background-color:rgb(9, 9, 9);
+}
+aside button{
+    padding: 5px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+aside button:hover{
+    background-color:rgb(255, 247, 247);
+    color: rgb(0, 0, 0);
+    transition: all ease 0.5s;
+    outline: none;
+    border: 1px solid white;
+}
+aside hr{
+    border: none;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.658);
+}
+aside label{
+    font-weight: 100;
+    font-size: 14px;
+    font-family: 'Roboto Serif', serif;
+}
+aside .colors{
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+aside p{
+    font-family: 'Roboto Serif', serif;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 200;
+}
+aside .rating div{
+    display: flex;
+    gap: 5px;
+}
+input[type=range]{
+    height: 2px;
+    margin-top: 10px;
+}
+aside .prices label{
+    font-size: 13px;
+    font-weight: 100;
+    word-spacing: 1px;
+    letter-spacing: 2px;
+}
+.prices input{
+    cursor: pointer;
+    width: 12px;
+}
+
+
+nav{
+    margin-left: 12.9vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    padding-right: 15vw;
+    position: fixed;
+}
+nav .meShopLogo{
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+}
+nav .navBar{
+    display: flex;
+    gap: 3vw;
+}
+.navBar li {
+    list-style: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+.navBar li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.navLinks:hover a{
+    border-bottom: 1px solid white;
+}
+.page-1{
+    height: 100vh;
+    width: 100%;
+}
+.page-2{
+    background-color: #850b0b;
+    height: 100vh;
+    width: 100%;
+}

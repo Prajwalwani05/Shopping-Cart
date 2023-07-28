@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MeShop</title>
+    <title>Signup</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-     <nav>
-        <a class="meShopLogo" href="./index.html">MeShop.</a>
+    <nav>
+        <a href="../index.html" class="meShopLogo">MeShop.</a>
         <div class="navBar">
                 <li class="navLinks"><a href="../shop/">Home</a></li>
                 <li class="navLinks"><a href="../login/">Login</a></li>
@@ -18,14 +18,16 @@
         </div>
      </nav>
      <div class="main">
-        <div>
-        <h1>MeShop.</h1>
-        <p>Your First Shop built on HTML, CSS And JAVASCRIPT</p>
-        <button class="loginBtn" id="loginBtn">Login</button>
-        <button id="signupBtn">Signup</button>
-        </div>
-        <img src="./images/undraw_web_shopping_re_owap 1.png" alt=""> 
-    </div>
+        <h1>Signup</h1>
+        <form action="Post">
+            <input type="text" placeholder="First Name" id="fName"><br>
+            <input type="text" placeholder="Last Name" id="lName"><br>
+            <input type="email" placeholder="Email" id="email"><br>
+            <input type="password" placeholder="Password" id="password"><br>
+            <input type="password" placeholder="Confirm Password" id="confirmPassword"><br>
+            <button id="signupBtn">Signup</button>
+        </form>
+     </div>
+    <script src="./script.js"></script>
 </body>
-<script src="./script.js"></script>
 </html>
