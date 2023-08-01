@@ -17,7 +17,9 @@
 //       }, 500)
 //   })
 
-
+if(localStorage.getItem("accessToken")){
+  window.location.href = "/shop";
+}
 
 let loginBtn = document.getElementById("loginBtn");
     let signupBtn = document.getElementById("signupBtn");
@@ -32,3 +34,4 @@ let loginBtn = document.getElementById("loginBtn");
             window.location.href = "../signup"
         }, 100);
     })
+ 

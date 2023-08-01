@@ -1,29 +1,35 @@
+  @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     letter-spacing: 2px;
-    font-weight: 100;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
 }
 html{
     scroll-behavior:smooth;
 }
 body{
-    font-weight: 400;
+    /* font-weight: 400; */
+    height: 100%;
     overflow-x: hidden;
 }
 body::-webkit-scrollbar{
-    background-color:rgb(244, 19, 68); 
-    width: 12px;
+    background-color:rgb(255, 255, 255); 
+    width: 5px;
 }
 body::-webkit-scrollbar-track{
-      background-color: rgb(197, 103, 139);
+      background-color: rgb(204, 204, 204);
 }
 body::-webkit-scrollbar-thumb{
-    background-color:#850b0b;
+    background-color:#3f3e3e;
 }
 body::-webkit-scrollbar-button{
-    background-color: #f57d7d;
+    background-color: #3f3e3e;
+}
+.main{
+    height: 100%;
 }
 aside{
     position: fixed;
@@ -38,13 +44,14 @@ aside{
     row-gap: 4.5vh;
     padding:20px;
     border-right: 1px solid white;
-    background-color:rgb(9, 9, 9);
+    background-color:rgb(31, 31, 31);
 }
 aside button{
     padding: 5px;
     background-color: transparent;
     color: white;
     border: 1px solid white;
+    cursor: pointer;
 }
 aside button:hover{
     background-color:rgb(255, 247, 247);
@@ -61,14 +68,12 @@ aside hr{
 aside label{
     font-weight: 100;
     font-size: 14px;
-    font-family: 'Roboto Serif', serif;
 }
 aside .colors{
   margin-top: 20px;
   letter-spacing: 2px;
 }
 aside p{
-    font-family: 'Roboto Serif', serif;
     margin-bottom: 10px;
     font-size: 18px;
     font-weight: 200;
@@ -94,12 +99,13 @@ aside .prices label{
 
 
 nav{
-    margin-left: 12.9vw;
+    margin-left: 12.8vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    background-color: black;
+    height: 10vh;
+    background-color: rgb(45, 45, 45);
     color: white;
     padding: 20px;
     padding-right: 15vw;
@@ -126,12 +132,88 @@ nav .navBar{
 .navLinks:hover a{
     border-bottom: 1px solid white;
 }
-.page-1{
-    height: 100vh;
-    width: 100%;
+.search input{
+    width: 83.9vw;
+    font-size: 15px;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid black;
 }
-.page-2{
-    background-color: #850b0b;
-    height: 100vh;
-    width: 100%;
+input::placeholder{
+    color:black;
+}
+.filterBtns{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    /* width: 80vh; */
+}
+.filterBtns button{
+    width: 15vw;
+    height:40px;
+    cursor: pointer;
+    background-color: rgb(201, 201, 201);
+    outline: none;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    font-size: 15px;
+    padding: 5px 50px;
+    font-weight: 400;
+}
+.filterBtns button:active{
+    background-color: black;
+    color: white;
+}
+.main-2{
+    height: 100%;
+    padding:90px 22px 10px 220px;
+}
+.page-1{
+    position: relative;
+}
+.productsBox{
+    /* padding: 13vh 2vw 5vh 15vw; */
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 20px;
+    /* position: relative; */
+}
+.productsBox img{
+    width: 125px;
+    padding-top: 10px;
+    /* border: 1px solid red; */
+    height: 160px;
+}
+.productCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid rgb(2, 2, 2);
+}
+.productCard .price{
+    margin-right: 110px;
+}
+.price , .size , .colors , .rating{
+    font-weight: 400;
+    padding-top: 5px;
+}
+.productCard button{
+    font-size: 15px;
+    padding: 5px 10px;
+    font-weight: 400;
+    width: 200px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    margin: 10px 0px;
+    outline: none;
+    border: none;
+}
+.productCard button:hover{
+    background-color: rgb(64, 99, 129);
+    color: aliceblue;
+    /* border: 1px solid rgb(64, 99, 129); */
 }

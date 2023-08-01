@@ -49,6 +49,11 @@ nav .navBar{
     margin: 10px 0px;
     border: 1px solid black;
 }
+#errorMsg{
+    display: none;
+    margin-top: 10px;
+    font-weight: bold;
+}
 #loginBtn{
     margin-top: 20px;
     font-size: 14px;
