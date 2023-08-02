@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     letter-spacing: 2px;
-    font-weight: 100;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
 }
 nav{
     display: flex;
@@ -27,6 +30,9 @@ nav .navBar{
     list-style: none;
     font-size: 15px;
     cursor: pointer;
+}
+.unline{
+    border-bottom: 1px solid white;
 }
 .navBar li a{
     color: rgb(255, 255, 255);

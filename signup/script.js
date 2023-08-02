@@ -7,7 +7,15 @@ let confirmPassword = document.getElementById("confirmPassword");
 let signupBtn = document.getElementById("signupBtn");
 let errorMsg = document.getElementById("errorMsg");
 
-
+document.getElementById("notValid").addEventListener('click' , ()=>{
+    alert("Please Login / Signup");
+  })
+  document.getElementById("notValidCart").addEventListener('click' , ()=>{
+    alert("Please Login / Signup");
+  })
+  document.getElementById("notValidProfile").addEventListener('click' , ()=>{
+    alert("Please Login / Signup");
+  })
 // errorMsg.textContent = "";
 function checkIfUserExist(email){
     let users = JSON.parse(localStorage.getItem('users'));

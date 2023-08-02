@@ -1,12 +1,18 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
 
- */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     letter-spacing: 2px;
-    font-weight: 100;
+    font-weight: 300;
+    font-family: 'Rubik', sans-serif;
+}
+.unline{
+    border-bottom: 1px solid white;
+}
+body{
+    background-color: skyblue;
 }
 nav{
     display: flex;
@@ -62,15 +68,24 @@ nav .navBar{
 .loginBtn{
     background-color: rgb(0, 0, 0);
     color: white;
+    font-size: 15px;
     margin-right: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
 }
 .loginBtn:hover{
-    background-color: rgb(240, 141, 20);
-    border:  1px solid rgb(240, 141, 20);
+    background-color: navy;
+    border-color: navy;
+}
+#signupBtn{
+    border-color: white;
+    font-weight: 400;
+    text-transform:uppercase;
+    font-size: 15px;
 }
 #signupBtn:hover{
-    background-color: rgb(240, 141, 20);
-    border: 1px solid rgb(240, 141, 20);
+    background-color: navy;
+    border:  navy;
     color: white;
 }
 .main img{

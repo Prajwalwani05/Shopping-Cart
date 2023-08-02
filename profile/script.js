@@ -17,6 +17,11 @@ if(userObject){
 }
 saveInfoBtn.addEventListener('click' , (e)=>{
     e.preventDefault();
+})
 
-    
+document.querySelector("#logoutBtn").addEventListener("click",()=>{
+    window.localStorage.removeItem('users');
+    window.sessionStorage.removeItem('loggenInUser')
+    window.localStorage.removeItem('accessToken')
+    window.location.href="../index.html";
 })

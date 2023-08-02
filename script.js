@@ -20,7 +20,15 @@
 if(localStorage.getItem("accessToken")){
   window.location.href = "/shop";
 }
-
+document.getElementById("notValid").addEventListener('click' , ()=>{
+  alert("Please Login / Signup");
+})
+document.getElementById("notValidCart").addEventListener('click' , ()=>{
+  alert("Please Login / Signup");
+})
+document.getElementById("notValidProfile").addEventListener('click' , ()=>{
+  alert("Please Login / Signup");
+})
 let loginBtn = document.getElementById("loginBtn");
     let signupBtn = document.getElementById("signupBtn");
 
