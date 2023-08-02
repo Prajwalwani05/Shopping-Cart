@@ -514,15 +514,16 @@ function addToCart(item){
     if(product.id==newProduct.id){
       product.quantity++;
       isExistingProduct=true;
+      alert("Added Once Again");
     }
-    else{
-      alert
-    }
+   
   })
   if(!isExistingProduct){
     newProduct.quantity=1;
     products.push(newProduct);
+    alert("Added");
   }
+  
   
   localStorage.setItem("cart",JSON.stringify(products));
 }
