@@ -88,8 +88,9 @@ nav .navBar{
   }
   main-content .items .item .info {
     padding:20px;
+    padding-bottom: 0px;
     font-size: 14px;
-    height: 170px;
+    height:170px;
   }
   
   main-content .items .item button {
@@ -179,3 +180,17 @@ nav .navBar{
     background-color:lightyellow;
     color:black;
   } 
+#msg{
+  display: none;
+  height:fit-content;
+  padding:10px;
+  text-align: center;
+  border: 2px solid black;
+  width: 60ch;
+  color: red;
+  font-weight: 500;
+  background-color: rgb(21, 21, 21);
+}
+#msg span{
+  color: aqua;
+}

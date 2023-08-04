@@ -1,204 +1,3 @@
-// let url = "https://fakestoreapi.com/products";
-// let productsBox = document.getElementById("productsBox");
-
-// async function fetchData() {
-//   const response = await fetch(url);
-//   const data = await response.json();
-//   console.log(data);
-//   showImage(data);
-// }
-// fetchData();
-
-// function showImage(data) {
-//     function allProducts(){
-//       let productsHtml = "";
-  
-//   let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-//   for (let x = 0; x < data.length; x++) {
-//    const product = data[x];
-//    const isInCart = cartItems.some(item => item.id === product.id);
-//    // const buttonLabel = isInCart ? 'Added to Cart' : 'Add to Cart';
-//     productsHtml += `
-//         <div class="productCard">
-//            <div class="img">
-//                <img src="${data[x].image}" alt="img">
-//             </div><br>
-//             <div class="cardContent">
-//                <span class="price">$${data[x].price}</span>
-//                <span class="size">S,M,L,XL </span>
-//                <p class="colors">Colors : 🔴 🔵 🟡</p>
-//                <p class="rating">Rating : ${data[x].rating.rate}</p>
-//             </div><br>
-//             <div class="button">
-//                <button class="cardBtn" data-product-id="${data[x].id}">Add to Cart</button>
-//             </div>
-//         </div>
-//         `;
-//         product.inCart = isInCart;
-//               }
-//        productsBox.innerHTML = productsHtml;
-
-//        //   Add event listener to each button
-//    const cardBtn = document.querySelectorAll('.cardBtn');
-//    cardBtn.forEach(button => {
-      
-//       button.addEventListener("click",(event)=>{
-//          const productId = event.target.getAttribute('data-product-id');
-//          const selectedProduct = data.find(product => product.id === parseInt(productId));
-//          addToCart(selectedProduct);
-
-//       // Disable the button and update label immediately
-//       button.disabled = true;
-//       button.style.backgroundColor = "orange";
-//       button.style.color = "black";
-//       button.textContent = 'Added to Cart';
-     
-//    })
-//   });
-
-//     }
-//     allProducts();
-
-//   let allBtn = document.getElementById("all");
-//   allBtn.addEventListener("click", () => {
-//    allProducts();
-//   });
-
-
-//   let menBtn = document.getElementById("mens");
-//   menBtn.addEventListener("click", () => {
-  
-//     productsBox.innerHTML = "";
-//     let productsHtml = "";
-   
-//     for (let x = 0; x < data.length; x++) {
-//       let category = data[x].category;
-//       if (category === "men's clothing") {
-//         productsHtml += `
-//         <div class="productCard">
-//            <div class="img">
-//                <img src="${data[x].image}" alt="img">
-//             </div><br>
-//             <div class="cardContent">
-//                <span class="price">$${data[x].price}</span>
-//                <span class="size">S,M,L,XL </span>
-//                <p class="colors">Colors : 🔴 🔵 🟡</p>
-//                <p class="rating">Rating : ${data[x].rating.rate}</p>
-//             </div><br>
-//             <div class="button">
-//                <button class="cardBtn" id="cardBtn" >Add to Cart</button>
-//             </div>
-//         </div>
-//         `;
-//       }
-    
-//       productsBox.innerHTML = productsHtml;
-//     }
-//     //   Add event listener to each butto
-//   });
-
-//   let womenBtn = document.getElementById("womens");
-//   womenBtn.addEventListener("click", () => {
-//     productsBox.innerHTML = "";
-//     let productsHtml = "";
-//     for (let x = 0; x < data.length; x++) {
-//       let category = data[x].category;
-//       if (category === "women's clothing") {
-//         productsHtml += `
-//        <div class="productCard">
-//           <div class="img">
-//               <img src="${data[x].image}" alt="img">
-//            </div><br>
-//            <div class="cardContent">
-//               <span class="price">$${data[x].price}</span>
-//               <span class="size">S,M,L,XL </span>
-//               <p class="colors">Colors : 🔴 🔵 🟡</p>
-//               <p class="rating">Rating : ${data[x].rating.rate}</p>
-//            </div><br>
-//            <div class="button">
-//               <button class="cardBtn" id="cardBtn">Add to Cart</button>
-//            </div>
-//        </div>
-//        `;
-//       }
-//       productsBox.innerHTML = productsHtml;
-//     }
-//   });
-
-//   let jewellery = document.getElementById("jewellery");
-//   jewellery.addEventListener("click", () => {
-//     productsBox.innerHTML = "";
-//     let productsHtml = "";
-//     for (let x = 0; x < data.length; x++) {
-//       let category = data[x].category;
-//       if (category === "jewelery") {
-//         productsHtml += `
-//       <div class="productCard">
-//          <div class="img">
-//              <img src="${data[x].image}" alt="img">
-//           </div><br>
-//           <div class="cardContent">
-//              <span class="price">$${data[x].price}</span>
-//              <span class="size">S,M,L,XL </span>
-//              <p class="colors">Colors : 🔴 🔵 🟡</p>
-//              <p class="rating">Rating : ${data[x].rating.rate}</p>
-//           </div><br>
-//           <div class="button">
-//              <button class="cardBtn" id="cardBtn">Add to Cart</button>
-//           </div>
-//       </div>
-//       `;
-//       }
-//       productsBox.innerHTML = productsHtml;
-//     }
-//   });
-
-//   let electronics = document.getElementById("electronics");
-//   electronics.addEventListener("click", () => {
-//     productsBox.innerHTML = "";
-//     let productsHtml = "";
-//     for (let x = 0; x < data.length; x++) {
-//       let category = data[x].category;
-//       if (category === "electronics") {
-//         productsHtml += `
-//      <div class="productCard">
-//         <div class="img">
-//             <img src="${data[x].image}" alt="img">
-//          </div><br>
-//          <div class="cardContent">
-//             <span class="price">$${data[x].price}</span>
-//             <span class="size">S,M,L,XL </span>
-//             <p class="colors">Colors : 🔴 🔵 🟡</p>
-//             <p class="rating">Rating : ${data[x].rating.rate}</p>
-//          </div><br>
-//          <div class="button">
-//             <button class="cardBtn" id="cardBtn">Add to Cart</button>
-//          </div>
-//      </div>
-//      `;
-//       }
-//       productsBox.innerHTML = productsHtml;
-//     }
-//   });
-
-  
-
-// }
-// function addToCart(product){
-//    let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-//    if(!cartItems.some(item=> item.id === product.id)){
-      
-//          cartItems.push(product);
-//          localStorage.setItem('cart' , JSON.stringify(cartItems));
-        
-//       }
-//       else{
-//        alert('Already added to Cart');
-//       }
-//    }
-
-
-
 
 let url = "https://fakestoreapi.com/products";
 let sizes = ["S", "M", "L", "XL"];
@@ -285,8 +84,11 @@ function displayProducts(products) {
     let img = document.createElement("img");
     img.src = product.image;
     imgDiv.append(img);
+    
     let info = document.createElement("div");
     info.setAttribute("class", "info");
+    let hr = document.createElement("hr");
+    hr.className = "hrLine";
     let titleRow=document.createElement("div");
     titleRow.setAttribute("class","row");
     titleRow.setAttribute("class","titleRow");
@@ -319,11 +121,16 @@ function displayProducts(products) {
     let cartBtn = document.createElement("button");
     cartBtn.setAttribute("class", "addBtn");
     cartBtn.textContent = "Add to Cart";
-    item.append(imgDiv, info, cartBtn);
+    item.append(imgDiv,hr, info, cartBtn);
     items.append(item);
     cartBtn.addEventListener("click",(e)=>{
       e.preventDefault();
       addToCart(product);
+      cartBtn.textContent = "Added";
+      cartBtn.style.backgroundColor = "orange";
+      var audio = new Audio(src="../Iphone - Message Tone.mp3");
+      audio.preload='auto';
+      audio.play();
     })
   });
 }
@@ -514,14 +321,14 @@ function addToCart(item){
     if(product.id==newProduct.id){
       product.quantity++;
       isExistingProduct=true;
-      alert("Added Once Again");
+      products.push(newProduct);
+     alert("Added Once Again");
     }
    
   })
   if(!isExistingProduct){
     newProduct.quantity=1;
     products.push(newProduct);
-    alert("Added");
   }
   
   

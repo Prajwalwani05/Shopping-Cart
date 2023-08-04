@@ -8,6 +8,7 @@ let signupBtn = document.getElementById("signupBtn");
 let errorMsg = document.getElementById("errorMsg");
 
 document.getElementById("notValid").addEventListener('click' , ()=>{
+    if(!localStorage.getItem(users.accessToken));
     alert("Please Login / Signup");
   })
   document.getElementById("notValidCart").addEventListener('click' , ()=>{
@@ -27,6 +28,7 @@ function checkIfUserExist(email){
     if(obj) return true;
     else return false;
 }
+
 
 function saveUser(fName,lName,emailInput,passwordInput){
     let array = new Uint8Array(16);

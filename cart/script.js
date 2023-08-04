@@ -4,17 +4,20 @@ if(!t){
   alert("Please Signup /login to continue");
   window.location.href = "../signup";
 }
-const cartSection=document.querySelector("#cart-section")
+const cartSection=document.querySelector("#cart-section");
+
 
 let cartItems=JSON.parse(localStorage.getItem("cart"))|| [];
 console.log(cartItems)
+
+
+
 let total=0;
 //price calculation
 function calculateTotal(){
    
  cartItems.map((item) => {
-    total+= item.price
-   
+    total+= item.price;
 });
 //to get current user who is logged in
 let currentUser=JSON.parse(localStorage.getItem("currentUser")) ||{total : 0};
@@ -28,6 +31,11 @@ calculateTotal()
 
 //Rendering cart items
 function renderCartSection(){
+  if(cartItems.length === 0){
+   setTimeout(() => {
+    window.location.href = "../shop";
+   }, 800);
+  }
     const searchHTML = cartItems.map((item) => renderItems(item));
     document.getElementById("cart-items").innerHTML =  searchHTML.join("");
 }
@@ -62,12 +70,16 @@ function renderItems(item) {
          <div class="circle" style="background-color: #203d3e"></div>
        </div>
      </div>
+     
      <div class="row">Rating: ${item.rating.rate}⭐</div>
    </div>
    <div id="btn-div">
    <button id="addBtn" onclick="removeItems(${item.id})">Remove from cart</button>
    </div>
-  </div>`;
+   </div>
+   <div id="msg">Your cart is empty! <span>Go to shop section and shop crazyyyy!</span></div>
+  `;
+
   }
 
   //Bill rendering
@@ -81,6 +93,7 @@ function renderItems(item) {
     </div>
     `
   }
+ 
 
   //Removing items from the cart
   function removeItems(id){
@@ -92,6 +105,7 @@ function renderItems(item) {
     renderCartSection()
     renderList()
     calculateTotal()
+    window.location.reload();
   }
 
   //Razor-pay 

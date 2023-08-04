@@ -7,6 +7,7 @@
     font-family: 'Rubik', sans-serif;
     font-weight: 300;
 }
+
 body {
     overflow-x: hidden;
   }
@@ -23,7 +24,6 @@ body {
 a {
     color: white;
     text-decoration: none;
-    font-size: 14px;
     border-bottom: none;
   }
 a:hover{
@@ -135,6 +135,7 @@ a:hover{
     width: 100%;
     position: relative;
     font-size: 1rem;
+    margin-top: 15px;
   }
   
   main-content .filters {
@@ -180,7 +181,13 @@ a:hover{
     width: 300px;
     margin-bottom: 10px;
   }
-  
+  .hrLine{
+    height: 1.5px;
+    margin-top: 5px;
+    background: black;
+    outline: none;
+    border: none;
+  }
   .items .item img {
     width: 100px;
     height: 135px;
